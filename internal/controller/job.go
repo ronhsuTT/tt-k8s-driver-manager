@@ -66,7 +66,7 @@ func buildFlashJob(cr *firmwarev1alpha1.TenstorrentFirmwarePolicy, nodeName, def
 	pullPolicy := corev1.PullIfNotPresent
 	forceWrite := false
 	continueOnReadbackFailure := false
-	homogenizeFirmwareVersions := false
+	homogenizeFirmwareVersions := true
 	if cr.Spec.Flasher != nil {
 		if cr.Spec.Flasher.Image != "" {
 			image = cr.Spec.Flasher.Image
